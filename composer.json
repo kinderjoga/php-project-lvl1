@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kinderjoga",
+            "email": "lapin.ey@outlook.com"
+        }
+    ],
+    "require": {}
+}
