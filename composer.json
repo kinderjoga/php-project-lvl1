@@ -1,6 +1,8 @@
 {
     "name": "hexlet/code",
+    "description": "my first project",
     "type": "project",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -12,5 +14,10 @@
             "email": "lapin.ey@outlook.com"
         }
     ],
-    "require": {}
+    "require": {
+        
+    },
+    "bin": [
+        "bin/brain-games"
+    ]
 }
