@@ -6,3 +6,6 @@ brain-games: #run program
 
 validate: #validate composer
 	composer validate
+
+lint: #validate code
+	@composer exec --verbose phpcs -- --standard=PSR12 src bin
