@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+use function BrainGames\Even\isEven;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+require_once 'src/Even.php';
+
+return isEven();
+
+
+
+// Answer "yes" if the number is even, otherwise answer "no".
+// Question: 15
+// Your answer: no
+// Correct!
+// Question: 6
+// Your answer: yes
+// Correct!
+// Question: 7
+// Your answer: no
+// Correct!
+// Congratulations, Sam!

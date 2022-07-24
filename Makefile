@@ -9,3 +9,6 @@ validate: #validate composer
 
 lint: #validate code
 	@composer exec --verbose phpcs -- --standard=PSR12 src bin
+
+brain-even: #run game
+	@./bin/brain-even
