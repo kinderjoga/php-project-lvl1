@@ -4,4 +4,4 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
 
-<video><source src="https://asciinema.org/connect/9334f07a-c246-4b9e-bea0-e9b9bbb3e168"></video>
+<video><source src="https://asciinema.org/a/u3nJpwHa1xq2IFFB36RZSx2r8"></video>
