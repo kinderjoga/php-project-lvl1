@@ -12,3 +12,6 @@ lint: #validate code
 
 brain-even: #run game
 	@./bin/brain-even
+
+brain-calc: #run game
+	@./bin/brain-calc
