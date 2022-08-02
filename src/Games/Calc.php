@@ -8,23 +8,23 @@ require_once 'src/Engine.php';
 
 function playCalc()
 {
-    $questions = getQuestion();
-    $correctAnswers = getCorrectAnswer($questions);
-    playGame($questions, $correctAnswers);
+    $questionSet = getQuestionSet();
+    $correctAnswerSet = getCorrectAnswerSet($questionSet);
+    playGame($questionSet, $correctAnswerSet);
 }
 
-function getCorrectAnswer(array $questions): array
+function getCorrectAnswerSet(array $questionSet): array
 {
     $calculeted =  [];
 
-    foreach ($questions as $question) {
+    foreach ($questionSet as $question) {
         $calculeted[] = calculate($question);
     }
 
     return $calculeted;
 }
 
-function getQuestion(): array
+function getQuestionSet(): array
 {
     $questions = [];
     for ($i = 0; $i < 3; $i++) {

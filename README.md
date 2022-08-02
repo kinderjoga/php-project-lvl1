@@ -10,7 +10,6 @@
  <p>Brain even game suggest you determine if the number is even or not. Run:</p>
   <pre><code>brain-even</code></pre>
 
-
    <h2><a><span></span></a>brain-calc</h2>
  <p>Brain calc game suggest you calculate random math operation for two random numbers. Run:</p>
   <pre><code>brain-calc</code></pre>
@@ -18,3 +17,7 @@
   <h2><a><span></span></a>brain-gcd</h2>
  <p>Brain gcd game suggest you find greatest common delimiter for random number. Run:</p>
   <pre><code>brain-gcd</code></pre>
+
+  <h2><a><span></span></a>brain-progression</h2>
+ <p>Brain gcd game suggest you find greatest common delimiter for random number. Run:</p>
+  <pre><code>brain-progression</code></pre>
