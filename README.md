@@ -19,5 +19,5 @@
   <pre><code>brain-gcd</code></pre>
 
   <h2><a><span></span></a>brain-progression</h2>
- <p>Brain gcd game suggest you find greatest common delimiter for random number. Run:</p>
+ <p>Brain progression game suggest you determine hidden number in progression. Run:</p>
   <pre><code>brain-progression</code></pre>
