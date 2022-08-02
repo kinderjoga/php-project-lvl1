@@ -8,34 +8,34 @@ require_once 'src/Engine.php';
 
 function playGcd()
 {
-    $questions = getQuestion();
-    $correctAnswers = getCorrectAnswer($questions);
-    playGame($questions, $correctAnswers);
+    $questionSet = getQuestionSet();
+    $correctAnswerSet = getCorrectAnswerSet($questionSet);
+    playGame($questionSet, $correctAnswerSet);
 }
 
-function getQuestion(): array
+function getQuestionSet(): array
 {
-    $questions = [];
+    $questionSet = [];
     for ($i = 0; $i < 3; $i++) {
         $number1 = rand(0, 50);
         $number2 = rand(0, 50);
-        $questions[] = "{$number1} {$number2}";
+        $questionSet[] = "{$number1} {$number2}";
     }
 
-    return $questions;
+    return $questionSet;
 }
 
-function getCorrectAnswer($questionSet): array
+function getCorrectAnswerSet(array $questionSet): array
 {
     $nodSet =  [];
     foreach ($questionSet as $value) {
-        $nodSet[] = array_sum(evklid($value));
+        $nodSet[] = array_sum(getNod($value));
     }
 
     return $nodSet;
 }
 
-function evklid(string $value): array
+function getNod(string $value): array
 {
     $arr = explode(' ', $value);
     $m = $arr[0];
