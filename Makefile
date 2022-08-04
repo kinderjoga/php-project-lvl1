@@ -1,11 +1,11 @@
 install: #install composer
-	composer install
+	@composer install
 
 brain-games: #run program
 	@./bin/brain-games
 
 validate: #validate composer
-	composer validate
+	@composer validate
 
 lint: #validate code
 	@composer exec --verbose phpcs -- --standard=PSR12 src bin
@@ -21,3 +21,6 @@ brain-gcd: #run game
 
 brain-progression: #run game
 	@./bin/brain-progression
+
+brain-prime: #run game
+	@./bin/brain-prime

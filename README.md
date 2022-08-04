@@ -9,15 +9,24 @@
  <h2><a><span></span></a>Example of brain games running with MAKE</h2>
  <p>Brain even game suggest you determine if the number is even or not. Run:</p>
   <pre><code>brain-even</code></pre>
+  <a href="https://asciinema.org/a/512519" target="_blank"><img src="https://asciinema.org/a/512519.svg" /></a>
 
    <h2><a><span></span></a>brain-calc</h2>
  <p>Brain calc game suggest you calculate random math operation for two random numbers. Run:</p>
   <pre><code>brain-calc</code></pre>
+  <a href="https://asciinema.org/a/512517" target="_blank"><img src="https://asciinema.org/a/512517.svg" /></a>
 
   <h2><a><span></span></a>brain-gcd</h2>
  <p>Brain gcd game suggest you find greatest common delimiter for random number. Run:</p>
   <pre><code>brain-gcd</code></pre>
+  <a href="https://asciinema.org/a/512522" target="_blank"><img src="https://asciinema.org/a/512522.svg" /></a>
 
   <h2><a><span></span></a>brain-progression</h2>
  <p>Brain gcd game suggest you find greatest common delimiter for random number. Run:</p>
   <pre><code>brain-progression</code></pre>
+  <a href="https://asciinema.org/a/512523" target="_blank"><img src="https://asciinema.org/a/512523.svg" /></a>
+
+  <h2><a><span></span></a>brain-prime</h2>
+ <p>Brain prime game suggest you determine if the number is prime or not. Run:</p>
+  <pre><code>brain-prime</code></pre>
+  <a href="https://asciinema.org/a/512544" target="_blank"><img src="https://asciinema.org/a/512544.svg" /></a>
