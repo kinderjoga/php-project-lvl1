@@ -12,6 +12,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-require_once 'src/games/hello.php';
+require_once 'src/games/Hello.php';
 
 return playHello();

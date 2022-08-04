@@ -6,7 +6,7 @@ use function BrainGames\Engine\playGame;
 
 function playPrime()
 {
-    require_once 'src/engine.php';
+    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);
