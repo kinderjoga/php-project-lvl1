@@ -6,7 +6,7 @@ use function BrainGames\Engine\playGame;
 
 function playGcd()
 {
-    require_once 'src/Engine.php';
+    require_once 'src/engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);
