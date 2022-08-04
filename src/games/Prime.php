@@ -4,10 +4,9 @@ namespace BrainGames\Prime;
 
 use function BrainGames\Engine\playGame;
 
-require_once 'src/Engine.php';
-
 function playPrime()
 {
+    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);

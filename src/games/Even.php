@@ -4,10 +4,9 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\playGame;
 
-require_once 'src/Engine.php';
-
 function playEven()
 {
+    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);

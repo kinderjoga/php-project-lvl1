@@ -4,9 +4,8 @@ namespace BrainGames\Hello;
 
 use function BrainGames\Engine\getHello;
 
-require_once 'src/Engine.php';
-
 function playHello()
 {
+    require_once 'src/Engine.php';
     return getHello();
 }

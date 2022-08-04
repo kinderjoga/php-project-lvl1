@@ -4,10 +4,9 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\playGame;
 
-require_once 'src/Engine.php';
-
 function playCalc()
 {
+    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);
