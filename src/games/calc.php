@@ -37,6 +37,7 @@ function getQuestionSet(): array
 
 function getCalculationSign(): string
 {
+    $calulationSign = '';
     switch (rand(0, 2)) {
         case 0:
             $calulationSign = '+';

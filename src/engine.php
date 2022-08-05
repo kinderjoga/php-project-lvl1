@@ -44,7 +44,7 @@ function getWin(string $name): void
     line("Congratulations, {$name}!");
 }
 
-function getLouse(string $name, $currentAnswer, $correctAnswer)
+function getLouse(string $name, string $currentAnswer, string $correctAnswer): void
 {
     line("'{$currentAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
     line("Let's try again, {$name}!");

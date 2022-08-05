@@ -7,15 +7,19 @@ use function BrainGames\Engine\playGame;
 function playProgression(): void
 {
     $questionSet = getQuestionSet();
+    $questionStringSet = [];
+    foreach ($questionSet as $value) {
+        $questionStringSet[] = implode(' ', $value);
+    }
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
-    playGame($questionSet, $correctAnswerSet);
+    playGame($questionStringSet, $correctAnswerSet);
 }
 
 function getQuestionSet(): array
 {
     $questionSet = [];
     for ($i = 0; $i < 3; $i++) {
-        $questionSet[] = implode(' ', getProgression());
+        $questionSet[] = getProgression();
     }
 
     return $questionSet;
@@ -25,7 +29,7 @@ function getCorrectAnswerSet(array $questionSet): array
 {
     $CorrectAnswerSet = [];
     foreach ($questionSet as $value) {
-        $arr = explode(' ', $value);
+        $arr = $value;
         $hidenIndex = array_search('..', $arr);
         if ($hidenIndex < 2) {
             $hiden = $arr[$hidenIndex + 1] -  ($arr[$hidenIndex + 2] - $arr[$hidenIndex + 1]);
@@ -39,6 +43,7 @@ function getCorrectAnswerSet(array $questionSet): array
 
 function getProgression(): array
 {
+    $progression = [];
     $progression[0] = rand(1, 20);
     $progressionStep = rand(2, 5);
     $hide = rand(0, 9);
