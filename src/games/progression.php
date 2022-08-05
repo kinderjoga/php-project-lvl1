@@ -26,7 +26,7 @@ function getCorrectAnswerSet(array $questionSet): array
     $CorrectAnswerSet = [];
     foreach ($questionSet as $value) {
         $arr = explode(' ', $value);
-        $hidenIndex = array_search('...', $arr);
+        $hidenIndex = array_search('..', $arr);
         if ($hidenIndex < 2) {
             $hiden = $arr[$hidenIndex + 1] -  ($arr[$hidenIndex + 2] - $arr[$hidenIndex + 1]);
         } else {
@@ -45,6 +45,6 @@ function getProgression(): array
     for ($i = 1; $i < 10; $i++) {
         $progression[] = $progression[$i - 1] + $progressionStep;
     }
-    $progression[$hide] = '...';
+    $progression[$hide] = '..';
     return $progression;
 }
