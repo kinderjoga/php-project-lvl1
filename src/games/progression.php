@@ -8,10 +8,13 @@ function playProgression(): void
 {
     $questionSet = getQuestionSet();
     $questionStringSet = [];
+    $correctAnswerSet = [];
     foreach ($questionSet as $value) {
+        $hidenNum = rand(0, 9);
+        $correctAnswerSet[] = $value[$hidenNum];
+        $value[$hidenNum] = '..';
         $questionStringSet[] = implode(' ', $value);
     }
-    $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionStringSet, $correctAnswerSet);
 }
 
@@ -25,31 +28,13 @@ function getQuestionSet(): array
     return $questionSet;
 }
 
-function getCorrectAnswerSet(array $questionSet): array
-{
-    $CorrectAnswerSet = [];
-    foreach ($questionSet as $value) {
-        $arr = $value;
-        $hidenIndex = array_search('..', $arr, true);
-        if ($hidenIndex < 2) {
-            $hiden = $arr[$hidenIndex + 1] -  ($arr[$hidenIndex + 2] - $arr[$hidenIndex + 1]);
-        } else {
-            $hiden = $arr[$hidenIndex - 1] + ($arr[$hidenIndex - 1] - $arr[$hidenIndex - 2]);
-        }
-        $CorrectAnswerSet[] =  $hiden;
-    }
-    return $CorrectAnswerSet;
-}
-
 function getProgression(): array
 {
     $progression = [];
     $progression[0] = rand(1, 20);
     $progressionStep = rand(2, 5);
-    $hide = rand(0, 9);
     for ($i = 1; $i < 10; $i++) {
         $progression[] = $progression[$i - 1] + $progressionStep;
     }
-    $progression[$hide] = '..';
     return $progression;
 }
