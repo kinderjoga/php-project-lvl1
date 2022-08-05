@@ -6,7 +6,6 @@ use function BrainGames\Engine\playGame;
 
 function playCalc()
 {
-    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);

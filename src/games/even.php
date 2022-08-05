@@ -1,12 +1,11 @@
 <?php
 
-namespace BrainGames\Prime;
+namespace BrainGames\Even;
 
 use function BrainGames\Engine\playGame;
 
-function playPrime()
+function playEven()
 {
-    require_once 'src/Engine.php';
     $questionSet = getQuestionSet();
     $correctAnswerSet = getCorrectAnswerSet($questionSet);
     playGame($questionSet, $correctAnswerSet);
@@ -17,7 +16,7 @@ function getQuestionSet(): array
     $questionSet = [];
 
     for ($i = 0; $i < 3; $i++) {
-        $questionSet[] = rand(2, 30);
+        $questionSet[] = rand(0, 100);
     }
 
     return $questionSet;
@@ -28,23 +27,12 @@ function getCorrectAnswerSet(array $questionSet): array
     $correctAnswerSet =  [];
 
     foreach ($questionSet as $question) {
-        if (isPrime($question)) {
-            $correctAnswerSet[] = 'yes';
-        } else {
+        if ($question % 2 !== 0) {
             $correctAnswerSet[] = 'no';
+        } else {
+            $correctAnswerSet[] = 'yes';
         }
     }
 
     return $correctAnswerSet;
-}
-
-function isPrime(int $num): bool
-{
-    for ($i = 2; $i < $num; $i++) {
-        if ($num % $i === 0) {
-            return false;
-        }
-    }
-
-    return true;
 }

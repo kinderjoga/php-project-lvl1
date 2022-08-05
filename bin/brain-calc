@@ -12,6 +12,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-require_once 'src/games/Calc.php';
-
 return playCalc();
