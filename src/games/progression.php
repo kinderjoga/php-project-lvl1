@@ -30,11 +30,7 @@ function getCorrectAnswerSet(array $questionSet): array
     $CorrectAnswerSet = [];
     foreach ($questionSet as $value) {
         $arr = $value;
-<<<<<<< HEAD
         $hidenIndex = array_search('..', $arr, true);
-=======
-        $hidenIndex = array_search('..', $arr, false);
->>>>>>> b9d0983276ffc48e36c60a4e058c97d05e51aed7
         if ($hidenIndex < 2) {
             $hiden = $arr[$hidenIndex + 1] -  ($arr[$hidenIndex + 2] - $arr[$hidenIndex + 1]);
         } else {
