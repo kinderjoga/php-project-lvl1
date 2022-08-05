@@ -15,8 +15,8 @@ function getQuestionSet(): array
 {
     $questionSet = [];
     for ($i = 0; $i < 3; $i++) {
-        $number1 = rand(0, 50);
-        $number2 = rand(0, 50);
+        $number1 = rand(1, 50);
+        $number2 = rand(1, 50);
         $questionSet[] = "{$number1} {$number2}";
     }
 
