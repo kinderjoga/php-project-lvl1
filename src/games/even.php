@@ -18,7 +18,6 @@ function getQuestionSet(): array
     for ($i = 0; $i < 3; $i++) {
         $questionSet[] = rand(0, 100);
     }
-
     return $questionSet;
 }
 
@@ -27,12 +26,12 @@ function getCorrectAnswerSet(array $questionSet): array
     $correctAnswerSet =  [];
 
     foreach ($questionSet as $question) {
-        if ($question % 2 !== 0) {
-            $correctAnswerSet[] = 'no';
-        } else {
-            $correctAnswerSet[] = 'yes';
-        }
+        $correctAnswerSet[] = isEven($question) ? 'yes' : 'no';
     }
-
     return $correctAnswerSet;
+}
+
+function isEven($number): bool
+{
+    return $number % 2 === 0;
 }
